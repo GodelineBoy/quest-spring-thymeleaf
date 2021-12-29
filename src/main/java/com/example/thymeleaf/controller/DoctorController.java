@@ -13,8 +13,8 @@ public class DoctorController{
     public String doctor(@RequestParam(required=false, defaultValue="0") int number,
                          @RequestParam(required=false, defaultValue="John Smith") String name, Model model) {
 	
-		Doctor doctorId = new Doctor(number, name);
-		model.addAttribute("doctor", doctorId);
+		model.addAttribute("number", number);
+		model.addAttribute("name", name);
     	
         return "doctor.html";
     }

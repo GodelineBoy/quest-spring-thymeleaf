@@ -6,12 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header th:fragment="header">
-    <nav>
-        <span>Doctor Secret Service</span>
-        <a href="/">Sign In</a>
-    </nav>
-</header>
+<header th:replace="fragments:header.html :: top">Header TODO</header>
+
 <ul class="doctor-list">
     <li><a href="/doctor/?number=1&name=William%20Hartnell">Doctor 1</a></li>
     <li><a href="/doctor/?number=2&name=Patrick%20Troughton">Doctor 2</a></li>
@@ -28,13 +24,6 @@
     <li><a href="/doctor/?number=13&name=Jodie%20Whittaker">Doctor 13</a></li>
     <li><a href="/doctor/">Unknown Doctor</a></li>
 </ul>
-<footer th:fragment ="footer">
-    <ul>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">TARDIS</a></li>
-    </ul>
-    <span>Copyright BBC/Terry Nation 1963</span>
-</footer>
+<footer th:replace="fragments/footer.html :: bottom">footer TODO</footer>
 </body>
 </html>
