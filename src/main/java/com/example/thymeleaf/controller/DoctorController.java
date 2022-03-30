@@ -10,12 +10,11 @@ import com.example.thymeleaf.model.Doctor;
 public class DoctorController{
 
     @GetMapping("/doctor/")
-    public String doctor(@RequestParam(required=false, defaultValue="0") int number,
-                         @RequestParam(required=false, defaultValue="John Smith") String name, Model model) {
+    public String doctor  (Model model, @RequestParam (value = "name", defaultValue = "Go Dr.House") String name, @RequestParam(value = "number", defaultValue = "1") String number) {
 	
 		model.addAttribute("number", number);
 		model.addAttribute("name", name);
     	
-        return "doctor.html";
+        return "doctor";
     }
 }
